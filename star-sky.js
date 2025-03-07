@@ -7,8 +7,8 @@ const particles = [];
 const maxParticles = 200;
 const mouse = { x: null, y: null, radius: 100 };
 const textParticles = [];
-const textSize = 100; // Adjust for text size
-const density = 5; // Lower number = denser text
+let textSize = Math.min(canvas.width / 10, 100); // Responsive text size
+const density = 5;
 const textMessage = "Hi, I'm Ryan, a Web Developer";
 
 class Particle {
@@ -46,6 +46,9 @@ class Particle {
 }
 
 function createTextParticles() {
+  textParticles.length = 0;
+  textSize = Math.min(canvas.width / 16, 100); // Adjust text size dynamically
+
   const textCanvas = document.createElement("canvas");
   const textCtx = textCanvas.getContext("2d");
   textCanvas.width = canvas.width;
@@ -131,7 +134,7 @@ canvas.addEventListener("click", () => {
     let distance = Math.sqrt(dx * dx + dy * dy);
     if (distance < mouse.radius) {
       let angle = Math.atan2(dy, dx);
-      let force = 2; // Adjust force of repulsion
+      let force = 2;
       p.speedX = -Math.cos(angle) * force;
       p.speedY = -Math.sin(angle) * force;
     }
@@ -141,7 +144,6 @@ canvas.addEventListener("click", () => {
 window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  textParticles.length = 0;
   createTextParticles();
 });
 
