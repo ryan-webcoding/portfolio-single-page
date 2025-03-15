@@ -25,11 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Snap to .underground (Section 3) at 15vh (halfway through its 30vh height)
+    // Snap to .underground (Section 3) at 20vh (halfway through its 40vh height)
     else if (
       !hasSnappedToUnderground &&
       hasSnappedToCity &&
-      undergroundTop < window.innerHeight * 0.85 &&
+      undergroundTop < window.innerHeight * 0.8 && // Adjusted for 40vh section
       undergroundTop > 0
     ) {
       isScrolling = true;

@@ -1,0 +1,477 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "gg sans";
+  src: url("./font/gg-sans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "gg sans";
+  src: url("/fonts/gg-sans-bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "gg sans";
+  src: url("./font/gg-sans-Medium.ttf") format("truetype");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gg sans";
+  src: url("./font/gg-sans-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+.night-club-image {
+  width: 100vw;
+  height: 100vh;
+}
+.cellphone-frame {
+  pointer-events: none;
+  position: absolute;
+  height: 90vh;
+  transform: translate(-50%, -50%);
+  width: 25vw;
+  height: 90vh;
+  left: 50%;
+  top: 50%;
+}
+.viewport-container {
+  background-color: rgb(27 28 34);
+  border-radius: 100px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+  width: 24vw;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+}
+.viewport-head {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 23vh;
+  width: 20vw;
+  border-bottom: 1px solid rgb(45, 47, 53);
+  background-color: rgb(27 28 34);
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  z-index: 2;
+}
+/*this is the start of first line of heading*/
+.head-system {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 13vh;
+  width: 17vw;
+}
+.time {
+  color: white;
+  font-family: "gg sans", sans-serif;
+  font-size: 1.6vmin;
+  font-weight: 900;
+}
+.signal-battery-image {
+  width: 4vw;
+}
+/*this is the start of second line of heading*/
+.head-chat {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 18vw;
+  top: 18vh;
+}
+.head-left-container {
+  display: flex;
+  align-items: center;
+  gap: 0.4vw;
+}
+.profile-pic-container {
+  width: 2vw;
+}
+
+.return-arrow {
+  width: 2.56vw;
+  height: 4vh;
+}
+.head-profile-pic {
+  border-radius: 50%;
+  width: 2vw;
+  height: 3.6vh;
+}
+.phone-video-call {
+  width: 5vw;
+  height: 4vh;
+}
+.head-username-container {
+  display: flex;
+}
+.head-username {
+  color: rgb(227, 229, 323);
+  font-family: "gg sans", sans-serif;
+  font-weight: bold;
+}
+.username-arrow {
+  color: rgb(227, 229, 323);
+  font-family: "gg sans", sans-serif;
+  font-size: 1vmin;
+  font-weight: 200;
+}
+
+.head-right-container {
+  display: flex;
+  align-items: center;
+}
+
+/*above are head part styling, dont need further adjustment*/
+.viewport-body {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 20vw;
+  top: 24vh;
+}
+
+.scroll-container {
+  width: 18vw;
+  height: 60vh;
+  overflow: hidden;
+}
+.entire-chatlog-container {
+  position: absolute;
+  display: flex;
+  width: 18vw;
+  min-height: 70vh;
+
+  transition: top 0.3s ease-in-out;
+  flex-direction: column;
+}
+.body-profile-img {
+  width: 5vw;
+  height: 9vh;
+  border-radius: 50%;
+}
+.body-profile-name {
+  color: rgb(227, 229, 231);
+  font-weight: bold;
+  font-size: 4vmin;
+  font-family: "gg sans", sans-serif;
+}
+.body-profile-name-small {
+  color: rgb(150, 152, 162);
+  font-size: 1.5vmin;
+  font-family: "gg sans", sans-serif;
+}
+.body-profile-description {
+  color: rgb(150, 152, 162);
+  font-size: 1.3vmin;
+  font-family: "gg sans", sans-serif;
+}
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  margin-top: 1vh;
+}
+.friend-request-button {
+  background-color: rgb(65, 126, 75);
+  color: white;
+  border-radius: 2vmin;
+  border: none;
+  font-size: 1.3vmin;
+  width: 8vw;
+  height: 3vh;
+}
+
+.report-spam-button {
+  background-color: rgb(200, 68, 66);
+  color: white;
+  border-radius: 2vmin;
+  border: none;
+  font-size: 1.3vmin;
+  width: 6vw;
+  height: 3vh;
+}
+.friend-request-button,
+.report-spam-button {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  transform-origin: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.friend-request-button:hover,
+.report-spam-button:hover {
+  transform: scale(0.9);
+}
+
+.friend-request-button:active,
+.report-spam-button:active {
+  transform: scale(1);
+}
+
+/*above are the heading of chatlog, no need to change*/
+.date-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vh;
+  width: 18vw;
+  height: 4vh;
+}
+
+.date-dashline {
+  position: absolute;
+  width: 17vw;
+  border: 0.5px solid rgb(45, 47, 53);
+}
+.date {
+  position: absolute;
+  background-color: rgb(27 28 34);
+  font-family: "gg sans", sans-serif;
+  font-size: 1vmin;
+  font-weight: 520;
+  padding: 0.1vmin;
+  color: rgb(150, 152, 162);
+  min-width: 5vw;
+  text-align: center;
+}
+/*above is the implementation of date module*/
+.chat-container {
+  display: flex;
+  align-items: flex-start;
+  width: 18vw;
+
+  min-height: 4vh;
+}
+.chat-content-container {
+  flex-grow: 1;
+
+  min-height: 4vh;
+}
+.chat-info-container {
+  display: flex;
+  gap: 0.6vw;
+  align-items: center;
+  justify-content: flex-start;
+}
+.chat-username {
+  color: rgb(227, 229, 323);
+  font-size: 1.3vmin;
+  font-weight: 600;
+  font-family: "gg sans", sans-serif;
+}
+.chat-date-time {
+  color: rgb(150, 152, 162);
+  font-weight: 520;
+  font-size: 1vmin;
+  font-family: "gg sans", sans-serif;
+}
+
+.cute-cat {
+  margin-right: 0.6vw;
+  width: 2vw;
+  height: 3.6vh;
+  border-radius: 50%;
+}
+.chat-body {
+  font-size: 1.3vmin;
+  font-family: "gg sans", sans-serif;
+  color: rgb(227, 229, 323);
+  font-weight: 100;
+}
+
+/*starting to implement the bottom menu*/
+.bottom-menu {
+  gap: 0.8vmin;
+  display: flex;
+  align-items: center;
+  background-color: rgb(27, 28, 34);
+  top: 50vh;
+  height: 7.6vh;
+  width: 18vw;
+
+  border-top: 1px solid rgb(45, 47, 53);
+  border-bottom: none;
+
+  transition: top 0.3s ease-in-out;
+  position: absolute;
+}
+.bottom-left-icons {
+  width: 6.5vw;
+  height: 3.7vh;
+}
+.bottom-input {
+  padding: 0.6vmin;
+  border: none;
+  border-radius: 10vmin;
+  height: 3vh;
+  font-size: 1.3vmin;
+  font-family: "gg sans", sans-serif;
+  color: rgb(227, 229, 323);
+  background-color: rgb(37, 39, 45);
+}
+.microphone-icon {
+  height: 3.6vh;
+  width: 2vw;
+}
+
+/*finish implementing bottom menu*/
+/*begin to implement keyboard and dialogue-button inside*/
+.keyboard {
+  position: absolute;
+  top: 57.6vh;
+  height: 20vh;
+  width: 18vw;
+  background-color: rgb(50, 49, 53);
+  transition: top 0.3s ease-in-out;
+}
+.dialogue-button {
+  border: none;
+  font-size: 1vmin;
+  font-family: "gg sans", sans-serif;
+  border-radius: 1vmin;
+  background-color: rgb(27, 0, 0);
+  color: rgb(227, 229, 323);
+  position: absolute;
+  width: 6vw;
+  height: 3vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*this is for typing banner, which include elipses animation and typing-banner-text*/
+.typing-banner {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 7.6vh;
+  width: 18vw;
+  height: 2.6vh;
+  background-color: rgb(27 28 34);
+  visibility: hidden;
+}
+.typing-banner-text {
+  color: rgb(227, 229, 323);
+  font-family: "gg sans", sans-serif;
+  font-weight: 100;
+  font-size: 1.1vmin;
+  margin-left: 0.9vmin;
+}
+.typing-banner-becky {
+  color: rgb(227, 229, 323);
+  font-family: "gg sans", sans-serif;
+  font-weight: bold;
+}
+.elipses-container {
+  display: flex;
+  margin-left: 0.9vmin;
+  gap: 0.9vmin;
+}
+#dot1 {
+  border-radius: 50%;
+  width: 0.3vw;
+  height: 0.62vh;
+  background-color: black;
+  animation: dot1Animation 1.5s linear infinite;
+}
+#dot2 {
+  border-radius: 50%;
+  width: 0.3vw;
+  height: 0.62vh;
+  background-color: black;
+  animation: dot2Animation 1.5s linear infinite;
+}
+#dot3 {
+  border-radius: 50%;
+  width: 0.3vw;
+  height: 0.62vh;
+  background-color: black;
+  animation: dot3Animation 1.5s linear infinite;
+}
+
+@keyframes dot1Animation {
+  0% {
+    transform: scale(1);
+    background-color: black;
+  }
+  30% {
+    transform: scale(1.2);
+    background-color: rgb(198, 199, 204);
+  }
+  60% {
+    transform: scale(1);
+    background-color: black;
+  }
+  100% {
+    transform: scale(1);
+    background-color: black;
+  }
+}
+
+@keyframes dot2Animation {
+  0% {
+    transform: scale(1);
+    background-color: black;
+  }
+  15% {
+    transform: scale(1);
+    background-color: black;
+  }
+  45% {
+    transform: scale(1.2);
+    background-color: rgb(198, 199, 204);
+  }
+  75% {
+    transform: scale(1);
+    background-color: black;
+  }
+  100% {
+    transform: scale(1);
+    background-color: black;
+  }
+}
+
+@keyframes dot3Animation {
+  0% {
+    transform: scale(1);
+    background-color: black;
+  }
+  30% {
+    transform: scale(1);
+    background-color: black;
+  }
+  60% {
+    transform: scale(1.2);
+    background-color: rgb(198, 199, 204);
+  }
+  90% {
+    transform: scale(1);
+    background-color: black;
+  }
+  100% {
+    transform: scale(1);
+    background-color: black;
+  }
+}
+/*finish implementing typing banner, which is all above*/

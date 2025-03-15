@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <img class="night-club-image" src="./img/night-club.png" alt="night club" />
+    <div class="viewport-container">
+      <div class="viewport-head">
+        <div class="head-system">
+          <div class="time-container"><p class="time" id="time"></p></div>
+          <div class="signal-battery-container">
+            <img
+              class="signal-battery-image"
+              src="./img/system-icon.png"
+              alt="system icon"
+            />
+          </div>
+        </div>
+        <div class="head-chat">
+          <div class="head-left-container">
+            <img
+              class="return-arrow"
+              src="./img/return-arrow.png"
+              alt="return arrow"
+            />
+            <img
+              class="head-profile-pic"
+              src="./img/profile-pic.png"
+              alt="profile picture"
+            />
+            <div class="head-username-container">
+              <div class="head-username">becky</div>
+              <div class="username-arrow">></div>
+            </div>
+          </div>
+          <div class="head-right-container">
+            <img
+              class="phone-video-call"
+              src="./img/phone-video-call.png"
+              alt="phone and video call icon"
+            />
+          </div>
+        </div>
+      </div>
+      <!--this is the dynamic message part-->>
+      <div class="viewport-body">
+        <div id="scroll-container" class="scroll-container">
+          <div id="entire-chatlog-container" class="entire-chatlog-container">
+            <img
+              class="body-profile-img"
+              src="./img/profile-pic.png"
+              alt="profile picture main"
+            />
+            <div class="body-profile-name">becky</div>
+            <div class="body-profile-name-small">becky</div>
+            <div class="body-profile-description">
+              This is the very beginning of your legendary conversation with
+              becky.
+            </div>
+            <div class="button-container">
+              <button id="friend-request-button" class="friend-request-button">
+                Send Friend Request
+              </button>
+              <button id="report-spam-button" class="report-spam-button">
+                Report Spam
+              </button>
+            </div>
+            <div class="date-container">
+              <div class="date-dashline"></div>
+              <div id="date" class="date"></div>
+            </div>
+            <div class="chat-container" id="chat-container">
+              <div class="chat-profile-pic-container">
+                <img
+                  class="cute-cat"
+                  src="./img/cute-cat.png"
+                  alt="cute cat profile picture"
+                />
+              </div>
+              <div class="chat-content-container">
+                <div class="chat-info-container">
+                  <div id="chat-username" class="chat-username">cool guy</div>
+                  <div class="chat-date-time">88/88/8888, 8:88am</div>
+                </div>
+                <div class="chat-body-container">
+                  <div class="chat-body">hello, how are you up to.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom-menu" id="bottom-menu">
+            <div id="typing-banner" class="typing-banner">
+              <div class="elipses-container">
+                <div class="dot" id="dot1"></div>
+                <div class="dot" id="dot2"></div>
+                <div class="dot" id="dot3"></div>
+              </div>
+              <div class="typing-banner-text">
+                <span class="typing-banner-becky">becky</span> is typing...
+              </div>
+            </div>
+            <img
+              class="bottom-left-icons"
+              src="img/bottom-icons/bottom-left-icons.png"
+              alt="bottom left icons"
+            />
+            <div class="bottom-input-container">
+              <input
+                id="toggleKeyboard"
+                class="bottom-input"
+                type="text"
+                placeholder="Message @becky"
+              />
+            </div>
+            <img
+              class="microphone-icon"
+              src="./img/bottom-icons/microphone-icon.png"
+              alt="microphone icon"
+            />
+          </div>
+          <div id="keyboard" class="keyboard">
+            <button id="dialogue-button" class="dialogue-button">
+              (say hello)
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img class="cellphone-frame" src="./img/cellphone.png" alt="cell phone" />
+    <script src="./index.js"></script>
+  </body>
+</html>
