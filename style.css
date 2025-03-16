@@ -5,6 +5,12 @@
   margin: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "Open Sans";
+  src: url("./font/OpenSans-VariableFont_wdth\,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 .sky {
   background-color: aliceblue;
   width: 100%;
@@ -273,4 +279,146 @@ label {
   width: 20vw;
   height: 30vh;
   visibility: hidden;
+}
+
+.underground-container {
+  z-index: 1;
+}
+.dancing-crowd {
+  height: 40vh;
+  position: absolute;
+  opacity: 6%;
+}
+/*below are code for information pannels, kind of ackward position i know*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style-type: none;
+}
+ul li {
+  margin-bottom: 1vmin;
+}
+h2 {
+  color: rgb(237, 160, 60);
+  margin-bottom: 0.6vmin;
+}
+h3 {
+  color: rgb(222, 155, 155);
+  font-size: 1.6vmin;
+  font-weight: bold;
+}
+p {
+  color: rgb(175, 175, 175);
+  font-size: 1.4vmin;
+}
+.tech-font {
+  color: rgb(101, 103, 110);
+}
+@keyframes fade-border {
+  0% {
+    border-color: aqua;
+  }
+  100% {
+    border-color: #00008b;
+  }
+}
+.information-container {
+  font-family: "Open Sans", sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+.about-me {
+  position: absolute;
+  padding: 1vmin;
+  border-radius: 3vmin;
+  background: linear-gradient(160deg, rgb(0, 23, 46), rgb(7, 53, 99));
+  top: 113vh;
+  left: 6vw;
+  max-width: 14vw;
+
+  border: 6px solid blue;
+  animation: fade-border 3s infinite alternate;
+}
+.skills-technologies {
+  position: absolute;
+  padding: 1vmin;
+  border-radius: 3vmin;
+  background: linear-gradient(160deg, rgb(0, 23, 46), rgb(7, 53, 99));
+  top: 120vh;
+  left: 30vw;
+  border: 6px solid blue;
+  animation: fade-border 3s infinite alternate;
+}
+.frontend-tech-container {
+  display: flex;
+  gap: 0.8vmin;
+}
+.backend-tech-container {
+  display: flex;
+  gap: 0.8vmin;
+}
+.other-tech-container {
+  display: flex;
+  gap: 0.8vmin;
+}
+.contact-me {
+  position: absolute;
+  padding: 1vmin;
+  border-radius: 3vmin;
+  background: linear-gradient(160deg, rgb(0, 23, 46), rgb(7, 53, 99));
+  top: 114vh;
+  left: 74vw;
+  border: 6px solid blue;
+  animation: fade-border 3s infinite alternate;
+}
+/*below are for tech elements*/
+.html {
+  padding: 0.5vmin;
+  background-color: rgb(252, 160, 118);
+  border-radius: 1vmin;
+}
+.css {
+  padding: 0.5vmin;
+  background-color: rgb(252, 187, 118);
+  border-radius: 1vmin;
+}
+
+.js {
+  padding: 0.5vmin;
+  background-color: rgb(252, 234, 118);
+  border-radius: 1vmin;
+}
+
+.react {
+  padding: 0.5vmin;
+  background-color: rgb(223, 252, 118);
+  border-radius: 1vmin;
+}
+.next {
+  padding: 0.5vmin;
+  background-color: rgb(156, 252, 118);
+  border-radius: 1vmin;
+}
+.node {
+  padding: 0.5vmin;
+  background-color: rgb(118, 252, 138);
+  border-radius: 1vmin;
+}
+.express {
+  padding: 0.5vmin;
+  background-color: rgb(118, 252, 187);
+  border-radius: 1vmin;
+}
+.git-github {
+  padding: 0.5vmin;
+  background-color: rgb(118, 252, 234);
+  border-radius: 1vmin;
+}
+
+.npm {
+  padding: 0.5vmin;
+  background-color: rgb(118, 216, 252);
+  border-radius: 1vmin;
 }
